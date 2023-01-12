@@ -1,4 +1,7 @@
 import { RootState } from './store';
+import { ConfirmActionType, SetModalActionType } from './actionCreators';
+
+type ActionTypes = ConfirmActionType | SetModalActionType;
 
 export interface AppState {
     isActionConfirmed: boolean,
@@ -10,7 +13,7 @@ const initialState: AppState = {
     isModalOpened: false
 };
 
-export const appReducer = (state = initialState, action: any ) => {
+export const appReducer = (state = initialState, action: ActionTypes) => {
     switch (action.type) {
         case 'CONFIRM_ACTION':
             return {
@@ -29,5 +32,3 @@ export const appReducer = (state = initialState, action: any ) => {
 
 export const selectIsActionWasConfirmed = (state: RootState) => state.appReducer.isActionConfirmed;
 export const selectIsModalOpened = (state: RootState) => state.appReducer.isModalOpened;
-
-

@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useAppDispatch, useOutsideClick } from '../../core/hooks';
 import { confirmAction, setModal } from '../../core/actionCreators';
 import { Button } from '../button/Button';
-import { ButtonWithCounter } from '../buttonWIthCounter/ButtonWithCounter';
+import { ButtonWithTimer } from '../buttonWIthCounter/ButtonWithTimer';
 import { ButtonColor, ButtonStyle } from '../../static/CommonDefinitions';
 import styles from './Modal.module.css';
 import CloseIcon from './../../assets/close-icon-16px.svg';
@@ -14,7 +14,7 @@ interface IModal {
 
 export const Modal = ({ title, text }: IModal) => {
     const dispatch = useAppDispatch();
-    const [isCounterFinished, setIsCounterFinished] = useState(false);
+    const [isTimerFinished, setIsTimerFinished] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
 
     const handleCloseModalClick = () => {
@@ -29,16 +29,16 @@ export const Modal = ({ title, text }: IModal) => {
     useOutsideClick(modalRef, handleCloseModalClick);
 
     const confirmButton = () => {
-        return isCounterFinished ?
+        return isTimerFinished ?
             <Button handleClick={handleConfirmActionClick}
                     title={'Подтвердить'}
                     color={ButtonColor.Blue}
                     style={ButtonStyle.Rounded}/> :
-            <ButtonWithCounter title={'Подтвердить'}
-                               color={ButtonColor.Gray}
-                               style={ButtonStyle.Rounded}
-                               disabled={true}
-                               setIsCounterFinished={setIsCounterFinished}
+            <ButtonWithTimer title={'Подтвердить'}
+                             color={ButtonColor.Gray}
+                             style={ButtonStyle.Rounded}
+                             disabled={true}
+                             setIsTimerFinished={setIsTimerFinished}
             />
     };
 

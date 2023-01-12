@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { ButtonColor, ButtonStyle } from '../../static/CommonDefinitions';
 import styles from './Button.module.css';
 
-export interface IButton extends Record<string, any> {
+export interface IButton {
     title: string,
     handleClick?: (e: React.MouseEvent<HTMLElement>) => void,
     disabled?: boolean,
