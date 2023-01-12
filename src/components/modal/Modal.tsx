@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useAppDispatch, useOutsideClick } from '../../core/hooks';
 import { confirmAction, setModal } from '../../core/actionCreators';
 import { Button } from '../button/Button';
-import { ButtonWithTimer } from '../buttonWIthCounter/ButtonWithTimer';
+import { ButtonWithTimer } from '../buttonWithTimer/ButtonWithTimer';
 import { ButtonColor, ButtonStyle } from '../../static/CommonDefinitions';
 import styles from './Modal.module.css';
 import CloseIcon from './../../assets/close-icon-16px.svg';
