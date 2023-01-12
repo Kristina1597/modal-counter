@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #e8e8e8;
+  overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+  font-family: 'Lato', 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  position: fixed;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p,
+table, tbody, thead, tr, th, td,
+input, button, ul {
+  margin: 0;
+  padding: 0;
+}

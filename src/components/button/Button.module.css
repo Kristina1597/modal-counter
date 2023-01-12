@@ -1,0 +1,42 @@
+.button {
+    margin: 0 auto;
+    height: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    white-space: nowrap;
+    border: unset;
+    text-transform: uppercase;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    cursor: pointer;
+    border: unset;
+}
+
+.button-red {
+    color: white;
+    background: red;
+}
+
+.button-gray {
+    color: white;
+    background: #b0b0b0;
+}
+
+.button-black {
+    color: white;
+    background: #000000;
+}
+
+.button-blue {
+    color: white;
+    background: #008cd9;
+}
+
+.button-rounded {
+    border-radius: 10px;
+}
