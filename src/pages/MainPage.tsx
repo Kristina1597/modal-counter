@@ -5,7 +5,7 @@ import { setModal } from '../core/actionCreators';
 import { selectIsActionWasConfirmed, selectIsModalOpened } from '../core/appReducer';
 import { Button } from '../components/button/Button';
 import { Modal } from '../components/modal/Modal';
-import { showAlert } from "../helpers";
+import { showAlert } from '../helpers';
 import styles from './MainPage.module.css';
 
 export const MainPage = () => {
@@ -15,7 +15,7 @@ export const MainPage = () => {
 
     useEffect(() => {
         isActionConfirmed && showAlert();
-    }, [isActionConfirmed])
+    }, [isActionConfirmed]);
 
     const executeActionButtonClick = () => {
         dispatch(setModal(true));
@@ -31,5 +31,5 @@ export const MainPage = () => {
             '                        их необходимо подтвердить, нажав на кнопку Подтвердить»'}/>
             }
         </div>
-    )
+    );
 };

@@ -66,10 +66,11 @@ export const Modal = ({ title, text }: IModal) => {
                 <div className={styles.modal_content_buttons}>
                     {confirmButton()}
                     <Button handleClick={handleCloseModalClick}
-                            title={'Отмена'} color={ButtonColor.Gray}
+                            title={'Отмена'}
+                            color={ButtonColor.Gray}
                             style={ButtonStyle.Rounded}/>
                 </div>
             </div>
         </div>
-    )
+    );
 };

@@ -12,11 +12,9 @@ interface IButtonWithCounter {
     handleClick?: (e: React.MouseEvent<HTMLElement>) => void,
     disabled?: boolean,
     style?: ButtonStyle,
-    buttonHeight?: string,
     color?: ButtonColor,
-    icon?: string,
     className?: string,
-    count?: number
+    timer?: number
     setIsCounterFinished: Dispatch<SetStateAction<boolean>>
 }
 
@@ -43,17 +41,17 @@ export const ButtonWithCounter = ({title, setIsCounterFinished, ...props}: IButt
                 setCount(value)
             } else {
                 clearInterval(timerId);
-                setIsCounterStarted(false)
+                setIsCounterStarted(false);
                 setIsCounterFinished(true);
             }
         }, 1000);
-    }
+    };
 
     return (
-        <Button count={count.toString()}
+        <Button timer={count.toString()}
                 title={title}
                 color={props.color}
                 style={props.style}
                 disabled={props.disabled}/>
-    )
+    );
 }
